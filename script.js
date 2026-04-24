@@ -1,22 +1,24 @@
-// Aguarda o site carregar completamente
+// Iniciar Animações de Scroll
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Seleciona o ícone do chat
-    const chatIcon = document.querySelector('.chat-icon');
-    const chatBubble = document.querySelector('.chat-bubble');
-
-    // 2. Adiciona a execução (o "clique")
-    chatIcon.addEventListener('click', () => {
-        alert("Olá Olucas! O Chatbot está a ser iniciado...");
-        // Aqui podes depois colocar o link para o teu WhatsApp
-        window.location.href = "https://wa.me/teunumeroaqui";
+    AOS.init({
+        duration: 1000,
+        once: true
     });
 
-    // 3. Efeito simples nos cards do portfólio
-    const cards = document.querySelectorAll('.card-job');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            console.log("Usuário interessado neste projeto!");
+    // Lógica do Formulário
+    const form = document.getElementById('form-contato');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert("Proposta enviada! Olucas entrará em contato em breve.");
+    });
+
+    // Smooth Scroll para links internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
 });
