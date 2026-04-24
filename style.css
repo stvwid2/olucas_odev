@@ -1,55 +1,98 @@
 :root {
-    --bg: #050505;
-    --card: #111111;
-    --gold: #d4a373;
-    --white: #ffffff;
-    --gray: #999999;
+    --bg: #030303;
+    --primary: #00ff88; /* Verde Neon Agressivo */
+    --accent: #bc13fe;  /* Roxo Neon */
+    --glass: rgba(255, 255, 255, 0.05);
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
     background-color: var(--bg);
-    color: var(--white);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Fundo com Brilho Dinâmico */
+.bg-glow {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #030303 100%);
+    z-index: -1;
 }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* Hero Section */
-.hero { padding: 100px 0; background: radial-gradient(circle at 20% 20%, #1a1a1a 0%, #050505 100%); }
-.tagline { color: var(--gold); font-size: 0.8rem; font-weight: bold; letter-spacing: 2px; }
-h1 { font-size: 3.5rem; margin: 20px 0; line-height: 1.1; }
-.highlight { color: var(--gold); }
-.subtitle { color: var(--gray); max-width: 600px; font-size: 1.2rem; }
-
-/* Botões */
-.cta-buttons { margin-top: 30px; display: flex; gap: 15px; }
-.btn-primary { background: var(--gold); color: black; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; }
-.btn-secondary { border: 1px solid #333; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; }
-
-/* Grid do Portfólio */
-.portfolio-section { padding: 80px 0; background: #080808; }
-.section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; }
-.grid-portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-
-.card-job {
-    background: var(--card);
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid #222;
-    transition: 0.3s;
+/* Hero */
+.hero { height: 100vh; display: flex; align-items: center; }
+.cyber-tag { color: var(--primary); font-weight: bold; letter-spacing: 5px; font-family: 'Syncopate'; }
+h1 { font-size: 4rem; font-family: 'Syncopate'; line-height: 1; margin: 20px 0; }
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.card-job:hover { transform: translateY(-10px); border-color: var(--gold); }
-.card-job img { width: 100%; height: 400px; object-fit: cover; }
-.card-info { padding: 20px; text-align: center; }
+/* Botão Neon */
+.btn-neon {
+    position: relative;
+    padding: 20px 40px;
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    overflow: hidden;
+    transition: 0.4s;
+    display: inline-block;
+}
 
-/* Integrações */
-.grid-integracoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 40px; }
-.mini-card { background: var(--card); padding: 20px; border-radius: 10px; border: 1px solid #222; text-align: center; }
+.btn-neon:hover {
+    background: var(--primary);
+    color: black;
+    box-shadow: 0 0 50px var(--primary);
+}
 
-/* Chat */
-.chat-widget { position: fixed; bottom: 30px; right: 30px; text-align: right; }
-.chat-bubble { background: white; color: black; padding: 10px 15px; border-radius: 15px 15px 0 15px; margin-bottom: 10px; font-size: 0.8rem; }
-.chat-icon { background: var(--gold); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-left: auto; cursor: pointer; }
+/* Grid de Projetos Agressivo */
+.grid-cyber { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; padding: 100px 0; }
+
+.card-glass {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.card-glass:hover {
+    border-color: var(--primary);
+    transform: scale(1.02);
+}
+
+.img-wrapper img { width: 100%; border-radius: 15px; filter: grayscale(50%); transition: 0.5s; }
+.card-glass:hover img { filter: grayscale(0%); }
+
+/* WhatsApp Agressivo */
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 40px; right: 40px;
+    width: 70px; height: 70px;
+    z-index: 1000;
+}
+
+.whatsapp-fixed img { width: 100%; position: relative; z-index: 2; }
+
+.wpp-pulse {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: var(--primary);
+    border-radius: 50%;
+    animation: pulse-ring 1.5s infinite;
+}
+
+@keyframes pulse-ring {
+    0% { transform: scale(0.8); opacity: 0.8; }
+    100% { transform: scale(2); opacity: 0; }
+}
