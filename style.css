@@ -1,123 +1,87 @@
-/* DEFINIÇÃO DE VARIÁVEIS */
 :root {
-    --bg-total-black: #000000;
-    --text-white: #ffffff;
-    --gold-accent: #d4a373;
-    --shadow-light: rgba(255, 255, 255, 0.15);
-    --social-size: 45px; /* Tamanho pequeno para os ícones */
-    --card-bg: #0a0a0a;
+    --bg-color: #0f0f0f; /* Cinza grafite muito escuro */
+    --card-color: #1a1a1a;
+    --primary-color: #d4a373; /* Dourado */
+    --text-color: #ffffff;
 }
 
 body {
     margin: 0;
-    padding: 0;
-    background-color: var(--bg-total-black);
-    color: var(--text-white);
     font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
-    max-width: 1200px;
+    width: 90%;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 20px;
+    text-align: center;
 }
 
-/* DESTAQUE DE TEXTO COM SOMBRA BRANCA */
-.glow-text {
-    text-shadow: 0 0 15px var(--shadow-light);
-}
+/* HERO */
+.hero { padding: 60px 0; }
+.badge { color: var(--primary-color); border: 1px solid var(--primary-color); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
+h1 { font-size: 2.5rem; margin: 20px 0; }
 
-.shadow-text {
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8), 0 0 5px var(--shadow-light);
-}
-
-.highlight {
-    color: var(--gold-accent);
-}
-
-/* HERO CENTRALIZADO */
-.hero {
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    text-align: center; /* Centraliza o texto do topo */
-}
-
-.hero-container {
-    display: flex;
-    justify-content: center;
-}
-
-/* CENTRALIZAÇÃO DE IMAGENS E CARDS */
-.grid-portfolio {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza as imagens na página */
-    gap: 40px;
-    padding: 50px 0;
-}
-
-.card-job {
-    width: 100%;
-    max-width: 800px; /* Limita a largura para não esticar demais */
-    background: var(--card-bg);
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid #1a1a1a;
-    display: flex;
-    justify-content: center;
-}
-
-.card-job img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain; /* Garante que a imagem centralize sem cortes */
-}
-
-/* BOTÃO PRINCIPAL */
+/* BOTÃO */
 .btn-main {
-    background: var(--gold-accent);
+    background: var(--primary-color);
     color: black;
-    padding: 15px 40px;
-    border-radius: 50px;
+    padding: 12px 30px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    margin-top: 20px;
 }
 
-/* ÍCONES SOCIAIS FIXOS - PEQUENOS E À DIREITA */
-.social-fixed {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
+/* IMAGENS CENTRALIZADAS E CONTROLADAS */
+.grid-portfolio {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    z-index: 1000;
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.social-icon {
-    width: var(--social-size);
-    height: var(--social-size);
-    transition: transform 0.3s ease;
+.card-job {
+    background: var(--card-color);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #333;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.social-icon img {
-    width: 100%;
-    height: 100%;
+.card-job img {
+    width: 100%; /* Ocupa o card todo */
+    height: auto;
+    display: block;
 }
 
-.social-icon:hover {
-    transform: translateY(-5px);
+/* ÍCONES SOCIAIS PEQUENOS FIXOS */
+.social-links {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.badge {
-    color: var(--gold-accent);
-    border: 1px solid var(--gold-accent);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
+.icon {
+    width: 40px; /* Bem pequeno como pediste */
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
 }
+
+.icon img { width: 24px; height: 24px; }
+.icon:hover { transform: scale(1.1); background: var(--primary-color); }
