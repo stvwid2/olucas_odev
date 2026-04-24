@@ -1,111 +1,169 @@
-<!DOCTYPE html>
-<html lang="pt-pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olucas Especialista | Landing Pages & Automação</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./estilo.css">
-</head>
-<body>
+<!-- ============================================================
+     PAGE 1: HOME
+     ============================================================ -->
+<div class="page active" id="page-home">
 
-    <nav class="navbar">
-        <div class="container nav-flex">
-            <div class="logo">OLUCAS<span>.</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="container hero-grid">
-            <div class="hero-text" data-aos="fade-right">
-                <span class="badge-tech">SITES & LANDING PAGES DE ALTA CONVERSÃO</span>
-                <h1>Design que gera <span class="neon-text">resultados reais</span> para o seu negócio.</h1>
-                <p>Desenvolvemos sites modernos, rápidos e otimizados para converter visitantes em clientes, com automação, integração e suporte completo.</p>
-                <div class="cta-row">
-                    <a href="https://wa.me/55319721145453" class="btn-primary">Quero meu projeto ↗</a>
-                    <a href="#portfolio" class="btn-secondary">Ver portfólio</a>
-                </div>
-                <div class="hero-benefits">
-                    <span>⚡ Alta Conversão</span>
-                    <span>🚀 Carregamento Rápido</span>
-                    <span>🔍 SEO Otimizado</span>
-                </div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge reveal">
+            <div class="hero-badge-icon">↑</div>
+            +250% aumento médio de conversão
+          </div>
+          <h1 class="display-xl reveal reveal-delay-1">Design que gera <em>resultados reais</em> para o seu negócio</h1>
+          <p class="hero-sub reveal reveal-delay-2">Landing pages, automação e integrações construídas para converter. Seu negócio merece tecnologia que trabalha 24h por dia.</p>
+          <div class="hero-ctas reveal reveal-delay-3">
+            <button class="btn btn-primary btn-lg" onclick="showPage('contact')">Quero meu projeto →</button>
+            <button class="btn btn-ghost btn-lg" onclick="showPage('portfolio')">Ver portfólio</button>
+          </div>
+          <div class="hero-benefits reveal">
+            <div class="benefit-item">
+              <div class="benefit-check">✓</div>
+              Alta conversão — páginas otimizadas para vender mais
             </div>
-            <div class="hero-img" data-aos="zoom-in">
-                <div class="img-card">
-                    <img src="https://giant-rose-4z2sk8jblm.edgeone.app/b3c6cdee-58f6-47dd-b9a0-47d4c3cc6167.png" alt="Olucas Especialista">
-                    <div class="floating-badge">+250% Conversão</div>
-                </div>
+            <div class="benefit-item">
+              <div class="benefit-check">✓</div>
+              Carregamento rápido — performance que retém visitantes
             </div>
-        </div>
-    </section>
-
-    <section id="servicos" class="services">
-        <div class="container">
-            <h2 class="section-title">Soluções que impulsionam seu negócio</h2>
-            <div class="grid-cards">
-                <div class="card" data-aos="fade-up">
-                    <div class="icon">🚀</div>
-                    <h3>Landing Pages</h3>
-                    <p>Páginas de alta performance focadas em vendas e captura de leads qualificados.</p>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon">🤖</div>
-                    <h3>Automação</h3>
-                    <p>Chatbots inteligentes e fluxos de trabalho que trabalham 24/7 por você.</p>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon">🔌</div>
-                    <h3>Integrações API</h3>
-                    <p>Conectamos seu site com Meta Ads, Google, Nuvemshop e sistemas de logística.</p>
-                </div>
+            <div class="benefit-item">
+              <div class="benefit-check">✓</div>
+              SEO otimizado — visibilidade orgânica no Google
             </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2 class="section-title">Projetos de Elite</h2>
-            <div class="grid-portfolio">
-                <div class="project-box" data-aos="fade-up">
-                    <img src="https://thorough-magenta-lpwqbdtnim.edgeone.app/WhatsApp%20Image%202026-04-24%20at%2015.00.46.jpeg" alt="Projeto Dashboard">
-                    <div class="overlay"><span>Ver Detalhes</span></div>
-                </div>
+            <div class="benefit-item">
+              <div class="benefit-check">✓</div>
+              Suporte contínuo — parceiro de longo prazo no crescimento
             </div>
+          </div>
         </div>
-    </section>
 
-    <section id="contato" class="contact">
-        <div class="container">
-            <div class="contact-box" data-aos="zoom-in">
-                <h2>Vamos escalar seu negócio?</h2>
-                <p>Preencha os dados e receba uma consultoria estratégica.</p>
-                <form id="form-contato">
-                    <input type="text" placeholder="Seu Nome" required>
-                    <input type="tel" placeholder="Seu WhatsApp" required>
-                    <select>
-                        <option>Landing Page</option>
-                        <option>Automação/Chatbot</option>
-                        <option>E-commerce</option>
-                    </select>
-                    <button type="submit" class="btn-primary">Enviar Proposta</button>
-                </form>
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="hero-image-wrap">
+            <div class="hero-image-placeholder">
+              <div class="hero-avatar-ring">
+                <div class="hero-avatar-inner">👨‍💻</div>
+              </div>
+              <div class="hero-image-caption">
+                Especialista em<br><span>Conversão Digital</span>
+              </div>
             </div>
+          </div>
+          <div class="hero-metric-badge">
+            <div class="hero-metric-number">+250%</div>
+            <div class="hero-metric-label">Aumento médio de conversão</div>
+          </div>
+          <div class="hero-floating-card">
+            <div class="hero-floating-dot"></div>
+            <div>
+              <div class="hero-floating-text">Novo projeto iniciado</div>
+              <div class="hero-floating-sub">Há 2 minutos · E-commerce</div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <a href="https://wa.me/55319721145453" class="wpp-float">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
+  <!-- Stats -->
+  <div class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number">+150</div>
+          <div class="stat-label">Projetos entregues</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-number">+98%</div>
+          <div class="stat-label">Clientes satisfeitos</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-number">+250%</div>
+          <div class="stat-label">Aumento de conversão</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./script.js"></script>
-</body>
-</html>
+  <!-- Integrations -->
+  <section class="integrations-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="label section-tag">Ecossistema</div>
+        <h2 class="display-md reveal">Integrações com as ferramentas<br>que você já usa</h2>
+        <p class="reveal" style="margin-top: 12px;">Conectamos sua operação a qualquer plataforma do mercado.</p>
+      </div>
+      <div class="integrations-grid">
+        <div class="integration-pill reveal"><span class="integration-icon">📘</span> Meta Ads</div>
+        <div class="integration-pill reveal reveal-delay-1"><span class="integration-icon">💬</span> WhatsApp API</div>
+        <div class="integration-pill reveal reveal-delay-1"><span class="integration-icon">📸</span> Instagram</div>
+        <div class="integration-pill reveal reveal-delay-2"><span class="integration-icon">👥</span> Facebook</div>
+        <div class="integration-pill reveal reveal-delay-2"><span class="integration-icon">🔍</span> Google Ads</div>
+        <div class="integration-pill reveal reveal-delay-1"><span class="integration-icon">🐙</span> GitHub</div>
+        <div class="integration-pill reveal reveal-delay-2"><span class="integration-icon">🛍️</span> Nuvemshop</div>
+        <div class="integration-pill reveal"><span class="integration-icon">📦</span> Melhor Envio</div>
+        <div class="integration-pill reveal reveal-delay-1"><span class="integration-icon">🚚</span> SuperFrete</div>
+        <div class="integration-pill reveal reveal-delay-2"><span class="integration-icon">🏍️</span> Loggi</div>
+        <div class="integration-pill reveal"><span class="integration-icon">🎨</span> Photoshop</div>
+        <div class="integration-pill reveal reveal-delay-1"><span class="integration-icon">⚡</span> Zapier / Make</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="services-preview" style="border-top: 1px solid var(--black-border);">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="label section-tag">O que faço</div>
+        <h2 class="display-md reveal">Soluções que transformam<br>visitantes em clientes</h2>
+      </div>
+      <div class="services-preview-grid">
+        <div class="service-preview-card reveal" onclick="showPage('services')">
+          <div class="service-icon">🚀</div>
+          <h3>Landing Pages</h3>
+          <p>Páginas desenvolvidas com foco em conversão, velocidade e SEO para maximizar seus resultados de tráfego pago.</p>
+          <div class="service-arrow">↗</div>
+        </div>
+        <div class="service-preview-card reveal reveal-delay-1" onclick="showPage('services')">
+          <div class="service-icon">🛒</div>
+          <h3>E-commerce</h3>
+          <p>Lojas virtuais completas, integradas a meios de pagamento, logística e marketplaces para vender mais.</p>
+          <div class="service-arrow">↗</div>
+        </div>
+        <div class="service-preview-card reveal reveal-delay-1" onclick="showPage('services')">
+          <div class="service-icon">⚙️</div>
+          <h3>Automação</h3>
+          <p>Workflows inteligentes que eliminam tarefas repetitivas e escalam seu negócio sem aumentar a equipe.</p>
+          <div class="service-arrow">↗</div>
+        </div>
+        <div class="service-preview-card reveal reveal-delay-2" onclick="showPage('services')">
+          <div class="service-icon">🔗</div>
+          <h3>Integrações API</h3>
+          <p>Conectamos sistemas, plataformas e ferramentas para criar um ecossistema digital unificado e eficiente.</p>
+          <div class="service-arrow">↗</div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 36px;">
+        <button class="btn btn-ghost" onclick="showPage('services')">Ver todos os serviços →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div class="label" style="margin-bottom: 16px;">Pronto para crescer?</div>
+        <h2 class="display-md">Vamos escalar<br>seu negócio juntos</h2>
+        <p style="margin-top: 12px; font-size: 1.05rem;">Mais de 150 empresas já confiaram seus projetos. Agora é a sua vez.</p>
+        <div class="cta-buttons" style="margin-top: 36px;">
+          <button class="btn btn-primary btn-lg" onclick="showPage('contact')">Começar agora →</button>
+          <button class="btn btn-ghost btn-lg" onclick="showPage('portfolio')">Ver casos de sucesso</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
