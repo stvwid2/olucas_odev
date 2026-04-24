@@ -3,43 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olucas Especialista | Dev Designer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Olucas Especialista | Landing Pages & Automação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./estilo.css">
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <span class="badge">Especialista em Conversão</span>
-            <h1>Estratégia, Design e Tecnologia</h1>
-            <p>Transformamos cliques em clientes com automação de elite.</p>
-            <a href="https://wa.me/55319721145453" class="btn-main">Quero meu projeto</a>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">OLUCAS<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <section class="portfolio">
-        <div class="container">
-            <h2 class="section-title">Projetos de Elite</h2>
-            <div class="grid-portfolio">
-                <div class="card-job">
-                    <img src="https://thorough-magenta-lpwqbdtnim.edgeone.app/WhatsApp%20Image%202026-04-24%20at%2015.00.46.jpeg" alt="Dashboard">
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text" data-aos="fade-right">
+                <span class="badge-tech">SITES & LANDING PAGES DE ALTA CONVERSÃO</span>
+                <h1>Design que gera <span class="neon-text">resultados reais</span> para o seu negócio.</h1>
+                <p>Desenvolvemos sites modernos, rápidos e otimizados para converter visitantes em clientes, com automação, integração e suporte completo.</p>
+                <div class="cta-row">
+                    <a href="https://wa.me/55319721145453" class="btn-primary">Quero meu projeto ↗</a>
+                    <a href="#portfolio" class="btn-secondary">Ver portfólio</a>
                 </div>
-                <div class="card-job">
-                    <img src="https://giant-rose-4z2sk8jblm.edgeone.app/b3c6cdee-58f6-47dd-b9a0-47d4c3cc6167.png" alt="Dev Designer">
+                <div class="hero-benefits">
+                    <span>⚡ Alta Conversão</span>
+                    <span>🚀 Carregamento Rápido</span>
+                    <span>🔍 SEO Otimizado</span>
+                </div>
+            </div>
+            <div class="hero-img" data-aos="zoom-in">
+                <div class="img-card">
+                    <img src="https://giant-rose-4z2sk8jblm.edgeone.app/b3c6cdee-58f6-47dd-b9a0-47d4c3cc6167.png" alt="Olucas Especialista">
+                    <div class="floating-badge">+250% Conversão</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="social-links">
-        <a href="https://www.instagram.com/olucas.odev/" target="_blank" class="icon insta">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
-        </a>
-        <a href="https://wa.me/55319721145453" target="_blank" class="icon wpp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
-    </div>
+    <section id="servicos" class="services">
+        <div class="container">
+            <h2 class="section-title">Soluções que impulsionam seu negócio</h2>
+            <div class="grid-cards">
+                <div class="card" data-aos="fade-up">
+                    <div class="icon">🚀</div>
+                    <h3>Landing Pages</h3>
+                    <p>Páginas de alta performance focadas em vendas e captura de leads qualificados.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon">🤖</div>
+                    <h3>Automação</h3>
+                    <p>Chatbots inteligentes e fluxos de trabalho que trabalham 24/7 por você.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon">🔌</div>
+                    <h3>Integrações API</h3>
+                    <p>Conectamos seu site com Meta Ads, Google, Nuvemshop e sistemas de logística.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Projetos de Elite</h2>
+            <div class="grid-portfolio">
+                <div class="project-box" data-aos="fade-up">
+                    <img src="https://thorough-magenta-lpwqbdtnim.edgeone.app/WhatsApp%20Image%202026-04-24%20at%2015.00.46.jpeg" alt="Projeto Dashboard">
+                    <div class="overlay"><span>Ver Detalhes</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="contact-box" data-aos="zoom-in">
+                <h2>Vamos escalar seu negócio?</h2>
+                <p>Preencha os dados e receba uma consultoria estratégica.</p>
+                <form id="form-contato">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="tel" placeholder="Seu WhatsApp" required>
+                    <select>
+                        <option>Landing Page</option>
+                        <option>Automação/Chatbot</option>
+                        <option>E-commerce</option>
+                    </select>
+                    <button type="submit" class="btn-primary">Enviar Proposta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/55319721145453" class="wpp-float">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
